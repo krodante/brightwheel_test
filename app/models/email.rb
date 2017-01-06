@@ -16,9 +16,9 @@ class Email
   end
 
   def send_email(payload)
-    if ENV["MAILER"].casecmp("mailgun")
+    if ENV["MAILER"].downcase == "mailgun"
       HTTParty.post(@mailgun_uri + "/messages", body: payload)
-    elsif ENV["MAILER"].casecmp("mandrill")
+    elsif ENV["MAILER"].downcase == "mandrill"
       HTTParty.post(@mandrill_uri + "/messages/send.json", body: mandrill_body(payload))
     end
   end
