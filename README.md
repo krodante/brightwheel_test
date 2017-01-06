@@ -17,6 +17,8 @@ rspec spec
 ```
 and watch the tests pass!
 
+**Note**: I had a mail server created for testing purposes, which was torn down after. That may cause some issues with testing.
+
 ## Documentation
 
 The purpose of this application is to provide the service with a payload that will send an email through either Mailgun or Mandrill.
