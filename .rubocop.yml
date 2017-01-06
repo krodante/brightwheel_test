@@ -1,0 +1,41 @@
+AllCops:
+  Excludes:
+    - config.ru
+    - Gemfile
+    - Rakefile
+    - db/seeds.rb
+    - config/**/*
+    - bin/*
+    - app/channels/**/*
+    - app/helpers/**/*
+    - app/mailers/**/*
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  # If `true`, strings which span multiple lines using `\` for continuation must
+  # use the same type of quotes on each line.
+  ConsistentQuotesInMultiline: false
+
+Style/WordArray:
+  EnforcedStyle: brackets
+  SupportedStyles:
+    # percent style: %w(word1 word2)
+    - percent
+    # bracket style: ['word1', 'word2']
+    - brackets
+
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 20
+
+Metrics/LineLength:
+  Max: 100
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  SupportedStyles:
+    - nested
+    - compact
